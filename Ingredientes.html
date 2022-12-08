@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+
+<h1> INGREDIENTES </h1>
+
+<script>
+
+var ingredientes = [];
+    var cantidad = parseInt(prompt("¿Cuántos ingredientes vas a añadir?"));
+    var contador = 1;
+
+    if (cantidad != 0){
+
+    while( contador <= cantidad) {
+
+        var ingrediente = prompt("Informe el ingrediente ");
+        var elementoEncontrado = false;
+
+        for (var i=0; i<= ingredientes.length; i++){
+
+            if (ingrediente == ingredientes[i]){
+                elementoEncontrado = true;
+                alert("Ya ha ingresado este ingrediente anteriormente: " + ingrediente)
+                break;
+            }
+        }
+
+        if (elementoEncontrado == false){
+            ingredientes.push(ingrediente);
+             contador++;
+        }
+    }
+}
+
+    document.write(ingredientes);
+
+</script>
